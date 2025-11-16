@@ -3,17 +3,18 @@ import 'package:course_learning/features/onboarding/presentation/views/onboardin
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
-  static const String onboarding = '/';
-  static const String home = '/home';
+  static const String kOnboarding = '/';
+  static const String kHome = '/home';
 
   static final router = GoRouter(
+    initialLocation: kOnboarding,
     routes: [
       GoRoute(
-        path: onboarding,
+        path: kOnboarding,
         builder: (context, state) => const OnBoardingView(),
       ),
       GoRoute(
-        path: home,
+        path: kHome,
         builder: (context, state) => const HomeScreen(),
       ),
     ],
