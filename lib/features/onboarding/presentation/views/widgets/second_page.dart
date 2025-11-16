@@ -1,7 +1,8 @@
 import 'package:course_learning/core/shared/custom_button.dart';
 import 'package:course_learning/core/utils/assets.dart';
-import 'package:course_learning/core/utils/constants.dart';
+import 'package:course_learning/core/utils/colors.dart';
 import 'package:course_learning/core/utils/styles.dart';
+import 'package:course_learning/features/onboarding/presentation/views/widgets/percentage_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -29,6 +30,8 @@ class SecondPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        Gap(30),
+        PercentageWidget(percent: 0.66),
         Gap(40),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
@@ -48,7 +51,7 @@ class SecondPage extends StatelessWidget {
           onTap: () => controller.jumpToPage(2),
           child: Text(
             "Skip",
-            style: AppStyles.regular14.copyWith(color: kPrimaryColor),
+            style: AppStyles.regular14.copyWith(color: AppColors.primaryColor),
           ),
         ),
       ],

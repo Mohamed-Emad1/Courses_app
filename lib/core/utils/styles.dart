@@ -7,6 +7,7 @@ abstract class AppStyles {
     fontSize: 24,
     fontWeight: FontWeight.w400,
   );
+  
 
   static const TextStyle regular18 = TextStyle(
     fontFamily: 'Inter',
@@ -43,4 +44,6 @@ abstract class AppStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+
+
 }

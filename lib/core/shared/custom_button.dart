@@ -1,4 +1,4 @@
-import 'package:course_learning/core/utils/constants.dart';
+import 'package:course_learning/core/utils/colors.dart';
 import 'package:course_learning/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColors.primaryColor,
         padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       ),

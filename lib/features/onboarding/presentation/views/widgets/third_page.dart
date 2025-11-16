@@ -2,6 +2,7 @@ import 'package:course_learning/core/routing.dart';
 import 'package:course_learning/core/shared/custom_button.dart';
 import 'package:course_learning/core/utils/assets.dart';
 import 'package:course_learning/core/utils/styles.dart';
+import 'package:course_learning/features/onboarding/presentation/views/widgets/percentage_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +31,8 @@ class ThirdPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        Gap(30),
+        PercentageWidget(percent: 1),
         Gap(40),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
