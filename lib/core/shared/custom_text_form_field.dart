@@ -45,10 +45,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             : null,
         hintText: widget.hintText,
         hintStyle: AppStyles.regular14.copyWith(color: AppColors.textColor),
-        border: UnderlineInputBorder(
+        border: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
         ),
-        focusedBorder: UnderlineInputBorder(
+        focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: AppColors.primaryColor, width: 2),
         ),
       ),

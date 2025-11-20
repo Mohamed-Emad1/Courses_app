@@ -1,0 +1,15 @@
+{
+    "skip": "تخطي",
+    "next": "التالي",
+    "journey": "هيا نقم برحلة معا",
+    "select_class": "اختر ما تود دراسته",
+    "register": "سجل لاول مرة",
+    "login": "تسجيل",
+    "name": "الاسم",
+    "email": "البريد الالكتروني",
+    "password": "كلمه المرور",
+    "phoneNumber": "رقم الهاتف",
+    "haveAnAccount": "هل لديك حساب؟",
+    "dontHaveAnAccount": "ليس لديك حساب؟",
+    "selectCourse": "الرجاء اختيار دورات للدراسه"
+}

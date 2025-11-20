@@ -9,7 +9,7 @@ class CustomBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // Added height to make the container visible
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xffFDFDFD),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),

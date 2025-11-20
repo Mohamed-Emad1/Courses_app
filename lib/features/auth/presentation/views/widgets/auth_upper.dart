@@ -1,11 +1,11 @@
 import 'package:course_learning/core/utils/assets.dart';
 import 'package:course_learning/core/utils/styles.dart';
+import 'package:course_learning/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class AuthUpper extends StatelessWidget {
   const AuthUpper({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +22,16 @@ class AuthUpper extends StatelessWidget {
             ),
           ],
         ),
-        Gap(72),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 95),
-          child: const Text(
-            "Hi, Let’s Make a Journey with Us",
+        const Gap(72),
+         Padding(
+          padding: EdgeInsets.symmetric(horizontal: 95),
+          child: Text(
+            S.of(context).journey,
             style: AppStyles.regular24,
             textAlign: TextAlign.center,
           ),
         ),
-        Gap(35),
+        const Gap(35),
       ],
     );
   }

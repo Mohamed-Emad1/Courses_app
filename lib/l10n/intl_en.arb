@@ -1,0 +1,16 @@
+{
+    "skip": "Skip",
+    "next": "Next",
+    "journey": "Let’s make a journey",
+    "select_class": "Select class you want to study",
+    "register": "Register",
+    "login": "Login",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "phoneNumber": "Phone Number",
+    "haveAnAccount": "Have an account?",
+    "dontHaveAnAccount": "Don't have an account?",
+    "dataStructure": "Data Structure",
+    "selectCourse": "Please select at least one course"
+}

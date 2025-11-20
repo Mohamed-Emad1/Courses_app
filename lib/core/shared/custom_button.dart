@@ -3,10 +3,16 @@ import 'package:course_learning/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.text, this.onPressed});
+  const CustomButton({
+    super.key,
+    required this.text,
+    this.onPressed,
+    this.textStyle,
+  });
 
   final String text;
   final void Function()? onPressed;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,9 @@ class CustomButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: AppStyles.regular14.copyWith(color: Color(0xFFFDFDFD)),
+        style:
+            textStyle ??
+            AppStyles.regular14.copyWith(color: const Color(0xFFFDFDFD)),
       ),
     );
   }

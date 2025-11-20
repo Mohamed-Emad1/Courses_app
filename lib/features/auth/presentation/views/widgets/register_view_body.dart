@@ -1,6 +1,6 @@
+import 'package:course_learning/features/auth/presentation/views/widgets/auth_upper.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/custom_bottom_sheet.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/register_sheet_body.dart';
-import 'package:course_learning/features/auth/presentation/views/widgets/auth_upper.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -8,7 +8,7 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         AuthUpper(),
         Spacer(),
