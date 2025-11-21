@@ -189,6 +189,16 @@ class S {
       args: [],
     );
   }
+
+  /// `This field is required`
+  String get required_field {
+    return Intl.message(
+      'This field is required',
+      name: 'required_field',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

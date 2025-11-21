@@ -13,7 +13,7 @@ abstract class AppRouter {
   static const String kUserChoice = '/user_choice';
 
   static final router = GoRouter(
-    initialLocation: kOnboarding,
+    initialLocation: kLogin,
     routes: [
       GoRoute(
         path: kOnboarding,
@@ -25,8 +25,10 @@ abstract class AppRouter {
         builder: (context, state) => const RegisterView(),
       ),
       GoRoute(path: kLogin, builder: (context, state) => const LoginView()),
-      GoRoute(path: kUserChoice, builder: (context, state) => const UserChoiceView()),
-
+      GoRoute(
+        path: kUserChoice,
+        builder: (context, state) => const UserChoiceView(),
+      ),
     ],
   );
 }

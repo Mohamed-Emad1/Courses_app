@@ -11,5 +11,6 @@
     "phoneNumber": "رقم الهاتف",
     "haveAnAccount": "هل لديك حساب؟",
     "dontHaveAnAccount": "ليس لديك حساب؟",
-    "selectCourse": "الرجاء اختيار دورات للدراسه"
+    "selectCourse": "الرجاء اختيار دورات للدراسه",
+    "required_field": "هذا الحقل مطلوب"
 }

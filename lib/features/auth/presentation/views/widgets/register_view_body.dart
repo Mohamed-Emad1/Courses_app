@@ -2,6 +2,7 @@ import 'package:course_learning/features/auth/presentation/views/widgets/auth_up
 import 'package:course_learning/features/auth/presentation/views/widgets/custom_bottom_sheet.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/register_sheet_body.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
@@ -11,8 +12,12 @@ class RegisterViewBody extends StatelessWidget {
     return const Column(
       children: [
         AuthUpper(),
-        Spacer(),
-        CustomBottomSheet(sheetChild: RegisterSheetBody()),
+        Gap(120),
+        Expanded(
+          child: CustomBottomSheet(
+            sheetChild: SingleChildScrollView(child: RegisterSheetBody()),
+          ),
+        ),
       ],
     );
   }

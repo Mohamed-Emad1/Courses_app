@@ -33,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمه المرور"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("سجل لاول مرة"),
+        "required_field":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "selectCourse":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار دورات للدراسه"),
         "select_class":

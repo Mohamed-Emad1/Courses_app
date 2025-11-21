@@ -12,5 +12,6 @@
     "haveAnAccount": "Have an account?",
     "dontHaveAnAccount": "Don't have an account?",
     "dataStructure": "Data Structure",
-    "selectCourse": "Please select at least one course"
+    "selectCourse": "Please select at least one course",
+    "required_field": "This field is required"
 }
