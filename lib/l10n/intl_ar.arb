@@ -12,5 +12,15 @@
     "haveAnAccount": "هل لديك حساب؟",
     "dontHaveAnAccount": "ليس لديك حساب؟",
     "selectCourse": "الرجاء اختيار دورات للدراسه",
-    "required_field": "هذا الحقل مطلوب"
+    "required_field": "هذا الحقل مطلوب",
+    "home": "الرئيسية",
+    "courses": "الدورات",
+    "profile": "الملف الشخصي",
+    "Hi": "مرحبا",
+    "what_do_you_want": "ماذا تريد تعلم اليوم؟",
+    "search": "بحث",
+    "recent_learning": "آخر ما تعلمت",
+    "first_name": "الاسم الاول",
+    "last_name": "الاسم الاخير",
+    "recommended": "الدورات الموصى بها"
 }

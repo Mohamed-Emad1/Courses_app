@@ -12,7 +12,7 @@ class RegisterViewBody extends StatelessWidget {
     return const Column(
       children: [
         AuthUpper(),
-        Gap(120),
+        Gap(50),
         Expanded(
           child: CustomBottomSheet(
             sheetChild: SingleChildScrollView(child: RegisterSheetBody()),

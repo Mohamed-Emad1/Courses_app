@@ -22,23 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Hi": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "courses": MessageLookupByLibrary.simpleMessage("الدورات"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "first_name": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
         "haveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "journey": MessageLookupByLibrary.simpleMessage("هيا نقم برحلة معا"),
+        "last_name": MessageLookupByLibrary.simpleMessage("الاسم الاخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "password": MessageLookupByLibrary.simpleMessage("كلمه المرور"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "recent_learning": MessageLookupByLibrary.simpleMessage("آخر ما تعلمت"),
+        "recommended":
+            MessageLookupByLibrary.simpleMessage("الدورات الموصى بها"),
         "register": MessageLookupByLibrary.simpleMessage("سجل لاول مرة"),
         "required_field":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectCourse":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار دورات للدراسه"),
         "select_class":
             MessageLookupByLibrary.simpleMessage("اختر ما تود دراسته"),
-        "skip": MessageLookupByLibrary.simpleMessage("تخطي")
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "what_do_you_want":
+            MessageLookupByLibrary.simpleMessage("ماذا تريد تعلم اليوم؟")
       };
 }

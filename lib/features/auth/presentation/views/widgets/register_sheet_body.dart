@@ -14,11 +14,13 @@ class RegisterSheetBody extends StatefulWidget {
 }
 
 class _RegisterSheetBodyState extends State<RegisterSheetBody> {
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
   String? _email;
   String? _password;
   String? _phoneNumber;
+  String? _firstName;
+  String? _lastName;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,32 +31,55 @@ class _RegisterSheetBodyState extends State<RegisterSheetBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Gap(56),
-             Text(S.of(context).register, style: AppStyles.regular18),
+            const Gap(10),
+            Text(S.of(context).register, style: AppStyles.regular18),
             const Gap(26),
-        
+
             const Gap(26),
-             CustomTextFormField(hintText: S.of(context).email, onSaved: (newValue) => _email = newValue,),
+            CustomTextFormField(
+              hintText: S.of(context).first_name,
+              onSaved: (newValue) => _firstName = newValue,
+            ),
             const Gap(35),
-             CustomTextFormField(hintText: S.of(context).password, obscureText: true, onSaved: (newValue) => _password = newValue,),
+            CustomTextFormField(
+              hintText: S.of(context).last_name,
+              onSaved: (newValue) => _lastName = newValue,
+            ),
             const Gap(35),
-             CustomTextFormField(hintText:S.of(context).phoneNumber, onSaved: (newValue) => _phoneNumber = newValue,),
+            CustomTextFormField(
+              hintText: S.of(context).email,
+              onSaved: (newValue) => _email = newValue,
+            ),
+            const Gap(35),
+            CustomTextFormField(
+              hintText: S.of(context).password,
+              obscureText: true,
+              onSaved: (newValue) => _password = newValue,
+            ),
+            const Gap(35),
+            CustomTextFormField(
+              hintText: S.of(context).phoneNumber,
+              onSaved: (newValue) => _phoneNumber = newValue,
+            ),
             const Gap(26),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 45),
               child: SizedBox(
                 width: double.infinity,
-                child: CustomButton(text: S.of(context).register, onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    _formKey.currentState!.save();
+                child: CustomButton(
+                  text: S.of(context).register,
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
 
-                    //! do action send data to backend
-                  } else {
-                    setState(() {
-                      _autoValidateMode = AutovalidateMode.always;
-                    });
-                  }
-                }),
+                      //! do action send data to backend
+                    } else {
+                      setState(() {
+                        _autoValidateMode = AutovalidateMode.always;
+                      });
+                    }
+                  },
+                ),
               ),
             ),
             const Gap(25),

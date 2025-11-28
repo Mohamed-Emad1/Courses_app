@@ -13,7 +13,7 @@ abstract class AppRouter {
   static const String kUserChoice = '/user_choice';
 
   static final router = GoRouter(
-    initialLocation: kLogin,
+    initialLocation: kHome,
     routes: [
       GoRoute(
         path: kOnboarding,

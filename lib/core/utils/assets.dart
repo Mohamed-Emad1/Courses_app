@@ -21,5 +21,7 @@ class Assets {
   /// Assets for assetsThirdHeroImage
   /// assets/Third_Hero_Image.png
   static const String assetsThirdHeroImage = "assets/Third_Hero_Image.png";
+
+  static const String assetsHomeTest= "assets/home_test.png";
 }
 
