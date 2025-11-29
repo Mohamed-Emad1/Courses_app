@@ -1,6 +1,6 @@
 import 'package:course_learning/features/auth/presentation/views/widgets/auth_upper.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/custom_bottom_sheet.dart';
-import 'package:course_learning/features/auth/presentation/views/widgets/register_sheet_body.dart';
+import 'package:course_learning/features/auth/presentation/views/widgets/register_view_sheet_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -15,7 +15,9 @@ class RegisterViewBody extends StatelessWidget {
         Gap(50),
         Expanded(
           child: CustomBottomSheet(
-            sheetChild: SingleChildScrollView(child: RegisterSheetBody()),
+            sheetChild: SingleChildScrollView(
+              child: RegisterViewSheetBlocConsumer(),
+            ),
           ),
         ),
       ],

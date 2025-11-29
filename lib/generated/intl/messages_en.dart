@@ -52,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "select_class": MessageLookupByLibrary.simpleMessage(
             "Select class you want to study"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "unexpected_error":
+            MessageLookupByLibrary.simpleMessage("Unexpected error occurred"),
         "what_do_you_want": MessageLookupByLibrary.simpleMessage(
             "What do you want to learn today?")
       };

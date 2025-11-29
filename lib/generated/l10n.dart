@@ -299,6 +299,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Unexpected error occurred`
+  String get unexpected_error {
+    return Intl.message(
+      'Unexpected error occurred',
+      name: 'unexpected_error',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

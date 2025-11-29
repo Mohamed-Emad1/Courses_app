@@ -1,9 +1,11 @@
 import 'package:course_learning/core/routing.dart';
+import 'package:course_learning/core/services/service_locator.dart';
 import 'package:course_learning/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const LearningApp());
 }
 

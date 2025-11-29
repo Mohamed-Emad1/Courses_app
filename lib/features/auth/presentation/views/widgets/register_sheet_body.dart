@@ -1,9 +1,12 @@
 import 'package:course_learning/core/shared/custom_button.dart';
 import 'package:course_learning/core/shared/custom_text_form_field.dart';
 import 'package:course_learning/core/utils/styles.dart';
+import 'package:course_learning/features/auth/data/models/register_model.dart';
+import 'package:course_learning/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/have_an_account.dart';
 import 'package:course_learning/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 class RegisterSheetBody extends StatefulWidget {
@@ -71,7 +74,15 @@ class _RegisterSheetBodyState extends State<RegisterSheetBody> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
-
+                      BlocProvider.of<AuthCubit>(context).register(
+                        user: RegisterModel(
+                          email: _email!,
+                          password: _password!,
+                          phoneNumber: _phoneNumber!,
+                          firstName: _firstName!,
+                          lastName: _lastName!,
+                        ),
+                      );
                       //! do action send data to backend
                     } else {
                       setState(() {

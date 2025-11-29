@@ -23,5 +23,6 @@
     "recent_learning": "Recent Learning",
     "first_name": "First Name",
     "last_name": "Last Name",
-    "recommended": "Recommended"
+    "recommended": "Recommended",
+    "unexpected_error": "Unexpected error occurred"
 }

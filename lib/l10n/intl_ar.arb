@@ -22,5 +22,6 @@
     "recent_learning": "آخر ما تعلمت",
     "first_name": "الاسم الاول",
     "last_name": "الاسم الاخير",
-    "recommended": "الدورات الموصى بها"
+    "recommended": "الدورات الموصى بها",
+    "unexpected_error": "حدث خطأ غير متوقع"
 }

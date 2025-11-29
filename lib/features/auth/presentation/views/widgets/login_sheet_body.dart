@@ -1,12 +1,17 @@
 import 'dart:developer';
 
+import 'package:course_learning/core/routing.dart';
+import 'package:course_learning/core/shared/build_snack_bar.dart';
 import 'package:course_learning/core/shared/custom_button.dart';
 import 'package:course_learning/core/shared/custom_text_form_field.dart';
 import 'package:course_learning/core/utils/styles.dart';
+import 'package:course_learning/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/dont_have_an_account.dart';
 import 'package:course_learning/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginSheetBody extends StatefulWidget {
   const LoginSheetBody({super.key});
@@ -56,6 +61,19 @@ class _LoginSheetBodyState extends State<LoginSheetBody> {
                     log("i am here");
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
+
+                      BlocProvider.of<AuthCubit>(
+                        context,
+                      ).login(email: _email!, password: _password!);
+                      BlocListener<AuthCubit, AuthState>(
+                        listener: (context, state) {
+                          if (state is AuthSuccess) {
+                            GoRouter.of(context).pushNamed(AppRouter.kHome);
+                          } else if (state is AuthError) {
+                            buildSnackBar(context, state.message);
+                          }
+                        },
+                      );
 
                       //! do action send data to backend
                     } else {

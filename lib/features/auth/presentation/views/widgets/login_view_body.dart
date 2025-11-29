@@ -1,6 +1,6 @@
 import 'package:course_learning/features/auth/presentation/views/widgets/auth_upper.dart';
 import 'package:course_learning/features/auth/presentation/views/widgets/custom_bottom_sheet.dart';
-import 'package:course_learning/features/auth/presentation/views/widgets/login_sheet_body.dart';
+import 'package:course_learning/features/auth/presentation/views/widgets/login_view_sheet_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -15,7 +15,9 @@ class LoginViewBody extends StatelessWidget {
         Gap(140),
         Expanded(
           child: CustomBottomSheet(
-            sheetChild: SingleChildScrollView(child: LoginSheetBody()),
+            sheetChild: SingleChildScrollView(
+              child: LoginViewSheetBlocConsumer(),
+            ),
           ),
         ),
       ],

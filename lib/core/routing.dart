@@ -1,8 +1,12 @@
+import 'package:course_learning/core/services/service_locator.dart';
+import 'package:course_learning/features/auth/domain/repos/auth_repo.dart';
+import 'package:course_learning/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:course_learning/features/auth/presentation/views/login_view.dart';
 import 'package:course_learning/features/auth/presentation/views/register_view.dart';
 import 'package:course_learning/features/home/presentation/views/home_view.dart';
 import 'package:course_learning/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:course_learning/features/onboarding/presentation/views/user_choice_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -22,9 +26,18 @@ abstract class AppRouter {
       GoRoute(path: kHome, builder: (context, state) => const HomeScreen()),
       GoRoute(
         path: kRegister,
-        builder: (context, state) => const RegisterView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(authRepo: getIt<AuthRepo>()),
+          child: const RegisterView(),
+        ),
       ),
-      GoRoute(path: kLogin, builder: (context, state) => const LoginView()),
+      GoRoute(
+        path: kLogin,
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(authRepo: getIt<AuthRepo>()),
+          child: const LoginView(),
+        ),
+      ),
       GoRoute(
         path: kUserChoice,
         builder: (context, state) => const UserChoiceView(),
